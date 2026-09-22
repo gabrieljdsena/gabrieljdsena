@@ -118,19 +118,19 @@ def build_svg(theme_name, ascii_lines, right_lines):
             rendered.append(("", 0))
         elif kind == "header":
             text = item[1]
-            rule = "&mdash;" * (value_col + 12)
+            rule = "\u2500" * (value_col + 12)
             widths = (len(text) + value_col + 12) * CHAR_WIDTH
             rendered.append((f'{esc(text)} <tspan class="dots">{rule}</tspan>', widths))
         elif kind == "section":
             text = item[1]
-            rule = "&mdash;" * (value_col + 6)
+            rule = "\u2500" * (value_col + 6)
             widths = (len(text) + 2 + value_col + 6) * CHAR_WIDTH
             rendered.append((f'- {esc(text)} <tspan class="dots">{rule}</tspan>', widths))
         else:
             key, value = item[1], item[2]
             dots = value_col - len(key)
             markup = (
-                f'<tspan class="dots">&#46; </tspan>'
+                f'<tspan class="dots">. </tspan>'
                 f'<tspan class="key">{esc(key)}</tspan>'
                 f'<tspan class="dots">{"." * dots}</tspan> '
                 f'<tspan class="value">{esc(value)}</tspan>'
