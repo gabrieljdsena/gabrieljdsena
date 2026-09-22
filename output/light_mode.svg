@@ -1,61 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="971" height="468.8" viewBox="0 0 971 468.8" role="img" aria-label="ASCII GitHub profile card for gabrieljdsena">
-  <rect x="0.5" y="0.5" width="970" height="467.8" rx="8" fill="#ffffff" stroke="#d0d7de"/>
-  <text x="28" y="34.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                        _----ugoooooogu---_.</text>
-  <text x="28" y="44.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                   _-_gooooooooooooooooooooooog--.</text>
-  <text x="28" y="53.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                -\oo@o@oooooooooooooooooooooooooooo//</text>
-  <text x="28" y="63.400000000000006" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">            _\go@@ooooooooooooooooooooooooooooooo@ooo//</text>
-  <text x="28" y="73" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">         _\oooooooooooo@o@@@@@@@@@@@@@@@@@o@ooooooooooog/</text>
-  <text x="28" y="82.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">        \oooooooo@o@@@@ooooooxxxxxxxxxwa$$oo@@@@o@ooooooog/</text>
-  <text x="28" y="92.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">      \\ooo@oo@@ooooovv==j::jj:::::j::::::j===naoo@@o@ooooo//</text>
-  <text x="28" y="101.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">     \oo@@@o@oooo==::::::::::j:::::jj::::::::::u@gynw$o@o@ooo;</text>
-  <text x="28" y="111.39999999999999" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">   \\@@@@oowo@@@u;:::::::::::!;::::j:::::::__ugUX-Xo;:!1@@@@@|</text>
-  <text x="28" y="121" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">   |@@@@@\sgUV*=*VIuuu-;;::::jj:;:j:;::\gg@@@\!:::::!c::ooo@@|</text>
-  <text x="28" y="130.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">   o@@@@|:!=::::::::=nQ@@oogopc:j:!qgg@@o@oou;::::::::::@oxxx]</text>
-  <text x="28" y="140.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">  |@@@@@|::::::::j_jjuxoooooxj::::::iooo@oooooooguu/::::ooxjj:</text>
-  <text x="28" y="149.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">  |$@@@@|:::::\gawxoxggy=/owxc:::::jxnqZ\&amp;lt;pff@@p!!/q/:::@ojj:</text>
-  <text x="28" y="159.4" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">  ||@@@@|::::\p\'|}  |@|  !:::::::::::!` q; \@@@|  |og:jooj::</text>
-  <text x="28" y="169" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">  ||@@@@|:::ao|  |L-g@@o` :::::::::::::: |o@@o@p| .v=::jooj::</text>
-  <text x="28" y="178.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">  |vn@@@|::::j!::.VV***=:::::::::::::::::::jjj:::::::::joojixjj:</text>
-  <text x="28" y="188.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8"> jjxug@@|:::::::::::::::::::::j_jj;::::::::::::::::::::|ooxxooxx</text>
-  <text x="28" y="197.79999999999998" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8"> xog@@@@|:::::::::::::::::::jxooooox;::::::::::::::::::|ooxxxoox|</text>
-  <text x="28" y="207.4" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8"> oo@@@@@@|::::::::::::::::::|woooownj::::::::::::::::::|ooxxoooo|</text>
-  <text x="28" y="217" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">uoooo@@@@|::::::::::::::::::::::j::::::::::::::::::::::ooooooxoo|</text>
-  <text x="28" y="226.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">ooooooo@@|::::::::::::::::::::::::::::::::::::::::::::|ooooooxoo(</text>
-  <text x="28" y="236.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">[oooooooooy:::::::::::::::::::::::::::::::::::::::::::|oooooxxx\</text>
-  <text x="28" y="245.79999999999998" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8"> /1xooooooou::::::::::::::::::jjjjjj:::::::::::::::::jooooxo\'</text>
-  <text x="28" y="255.39999999999998" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">    /aoooo}-1;:::::::::::::::j:::j::::::::::::::::::!-/oooo\</text>
-  <text x="28" y="265" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">      ---+   /u;:::::::::::::::|nvj:::::::::::::::j`    --</text>
-  <text x="28" y="274.6" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">              /{u;::::::::::::::::::::::::::::::j-</text>
-  <text x="28" y="284.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                -&amp;lt;u;:::::::::::::::::::::::::|;^</text>
-  <text x="28" y="293.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                   -&amp;lt;x;;:::::::::j:::::::j_j^`</text>
-  <text x="28" y="303.4" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                      -{xxxxxxxoxxoooxxxor</text>
-  <text x="28" y="313" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                        |oooooooooooooooo</text>
-  <text x="28" y="322.59999999999997" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                         oooooooooooooooo</text>
-  <text x="28" y="332.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                         xooooooxoxooooox</text>
-  <text x="28" y="341.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                         |oooxxxxxxxxoxox</text>
-  <text x="28" y="351.4" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                         |xoxoxxxxxxxoooo,</text>
-  <text x="28" y="361" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                         jxxxxxxxxxxxxoxo@@@@g/</text>
-  <text x="28" y="370.59999999999997" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                   _--ggoooxxxxxxxxxxxoxoo@@@@//</text>
-  <text x="28" y="380.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                  \@@@mwovxxxxoooooooo@@@@@@@@@@guu.</text>
-  <text x="28" y="389.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">                 \@@@@gguuugg@@@@@@@@@@@@@@@ooooooooog/</text>
-  <text x="28" y="399.4" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">             -_\@@@@@@@@@@@@@@@@@@@@@@@@@ooooooooo@@@@@o/-_</text>
-  <text x="28" y="409" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">           \\oo@@@@@@@@@@@@@@@@@@@@@@@@oooooooo@@@o@o@@@@@@og//</text>
-  <text x="28" y="418.59999999999997" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">        \_\@@ooo@@@@@@@@@@@@@@@@@@@@oooooooo@@@@o@@@@@@@o@o@ooog/</text>
-  <text x="28" y="428.2" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">      \\@@@@@oooo@@@@@@@@@@@@@@@@@ooooooo@@@@@o@@@@@@@@@@o@oooooo/</text>
-  <text x="28" y="437.8" fill="#24292f" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="8">    _\@@@@@@@oo@o@@@@@@@@@@@@@@oooooooo@@@@@@@@@@@@@@@@@@@o@o@oooou.</text>
-  <text x="386.4" y="69.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#d0d7de">─</tspan><tspan fill="#0969da"> gabrieljdsena@github </tspan><tspan fill="#d0d7de">───────────────────────────────────</tspan></text>
-  <text x="386.4" y="89.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Uptime: </tspan><tspan fill="#8c959f">....................</tspan><tspan fill="#24292f"> 6 years, 5 months, 25 days</tspan></text>
-  <text x="386.4" y="109.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Location: </tspan><tspan fill="#8c959f">..................................</tspan><tspan fill="#24292f"> SP, Brazil</tspan></text>
-  <text x="386.4" y="129.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Languages: </tspan><tspan fill="#8c959f">......</tspan><tspan fill="#24292f"> C# 51%, TypeScript 44%, PowerShell 5%</tspan></text>
-  <text x="386.4" y="169.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#d0d7de">─</tspan><tspan fill="#0969da"> Contact </tspan><tspan fill="#d0d7de">────────────────────────────────────────────────</tspan></text>
-  <text x="386.4" y="189.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. GitHub: </tspan><tspan fill="#8c959f">......................</tspan><tspan fill="#24292f"> github.com/gabrieljdsena</tspan></text>
-  <text x="386.4" y="229.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#d0d7de">─</tspan><tspan fill="#0969da"> GitHub Stats </tspan><tspan fill="#d0d7de">───────────────────────────────────────────</tspan></text>
-  <text x="386.4" y="249.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Repos: </tspan><tspan fill="#8c959f">...............</tspan><tspan fill="#0550ae"> 2</tspan><tspan fill="#d0d7de"> | </tspan><tspan fill="#953800">. Stars: </tspan><tspan fill="#8c959f">...............</tspan><tspan fill="#0550ae"> 0</tspan></text>
-  <text x="386.4" y="269.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Forks: </tspan><tspan fill="#8c959f">...............</tspan><tspan fill="#0550ae"> 0</tspan><tspan fill="#d0d7de"> | </tspan><tspan fill="#953800">. Followers: </tspan><tspan fill="#8c959f">...........</tspan><tspan fill="#0550ae"> 0</tspan></text>
-  <text x="386.4" y="289.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Commits: </tspan><tspan fill="#8c959f">.............</tspan><tspan fill="#0550ae"> 3</tspan><tspan fill="#d0d7de"> | </tspan><tspan fill="#953800">. Contributed: </tspan><tspan fill="#8c959f">.........</tspan><tspan fill="#0550ae"> 0</tspan></text>
-  <text x="386.4" y="309.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. PRs: </tspan><tspan fill="#8c959f">.................</tspan><tspan fill="#0550ae"> 0</tspan><tspan fill="#d0d7de"> | </tspan><tspan fill="#953800">. Issues: </tspan><tspan fill="#8c959f">..............</tspan><tspan fill="#0550ae"> 0</tspan></text>
-  <text x="386.4" y="329.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Top repo: </tspan><tspan fill="#8c959f">.........................</tspan><tspan fill="#24292f"> gabrieljdsena (0 ★)</tspan></text>
-  <text x="386.4" y="369.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#d0d7de">─</tspan><tspan fill="#0969da"> Last 12 Months </tspan><tspan fill="#d0d7de">─────────────────────────────────────────</tspan></text>
-  <text x="386.4" y="389.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#953800">. Contributions: </tspan><tspan fill="#8c959f">.......</tspan><tspan fill="#0550ae"> 5</tspan><tspan fill="#d0d7de"> | </tspan><tspan fill="#953800">. Reviews: </tspan><tspan fill="#8c959f">.............</tspan><tspan fill="#0550ae"> 0</tspan></text>
-  <text x="386.4" y="409.4" font-family="'Consolas', 'Menlo', 'DejaVu Sans Mono', monospace" xml:space="preserve" font-size="16"><tspan fill="#2da44e">                                                    ▄█</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1026px" height="552px"
+ font-family="'JetBrains Mono', 'Cascadia Code', Consolas, monospace" font-size="16px">
+<style>
+.key {fill: #953800;}
+.value {fill: #0a3069;}
+.dots {fill: #9ba3ae;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="1026px" height="552px" fill="#f6f8fa" rx="15"/>
+<text fill="#24292f" xml:space="preserve">
+<tspan x="16" y="30">.................................................:+%</tspan>
+<tspan x="554.8000000000001" y="30">gabrieljdsena <tspan class="dots">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</tspan></tspan>
+<tspan x="16" y="50">................................................. ..</tspan>
+<tspan x="554.8000000000001" y="50"><tspan class="dots">&#46; </tspan><tspan class="key">Role</tspan><tspan class="dots">............</tspan> <tspan class="value">Developer</tspan></tspan>
+<tspan x="16" y="70">..................................................</tspan>
+<tspan x="554.8000000000001" y="70"><tspan class="dots">&#46; </tspan><tspan class="key">Uptime</tspan><tspan class="dots">..........</tspan> <tspan class="value">6 years, 6 months on GitHub</tspan></tspan>
+<tspan x="16" y="90">....................................................</tspan>
+<tspan x="16" y="110">...................::------------::............... :</tspan>
+<tspan x="554.8000000000001" y="110">- GitHub Stats <tspan class="dots">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</tspan></tspan>
+<tspan x="16" y="130">...............::------:::::::-------:............ :</tspan>
+<tspan x="554.8000000000001" y="130"><tspan class="dots">&#46; </tspan><tspan class="key">Repos</tspan><tspan class="dots">...........</tspan> <tspan class="value">2</tspan></tspan>
+<tspan x="16" y="150">.............:----::--===**=*==--------.............</tspan>
+<tspan x="554.8000000000001" y="150"><tspan class="dots">&#46; </tspan><tspan class="key">Stars</tspan><tspan class="dots">...........</tspan> <tspan class="value">0</tspan></tspan>
+<tspan x="16" y="170">............:::::=+%@@@@%@@%@@@@%=:==-:::...........</tspan>
+<tspan x="554.8000000000001" y="170"><tspan class="dots">&#46; </tspan><tspan class="key">Followers</tspan><tspan class="dots">.......</tspan> <tspan class="value">0</tspan></tspan>
+<tspan x="16" y="190">...........:.-*=*###++##+%%##*=-+#%%%%.........</tspan>
+<tspan x="554.8000000000001" y="190"><tspan class="dots">&#46; </tspan><tspan class="key">Top Languages</tspan><tspan class="dots">...</tspan> <tspan class="value">C#</tspan></tspan>
+<tspan x="16" y="210">............ +@@@%#*=::-#%%+-::-*++#@%. ....  .=*=-=</tspan>
+<tspan x="16" y="230">..........  .#@#*+**.###%@@%#%++.:%**%.   ..-=#@@@@@</tspan>
+<tspan x="16" y="250">..........-:.+@+#@+*=#@@@@@@@@#**+@%%#..-=..-=*#@%%%</tspan>
+<tspan x="16" y="270">  ...... -=:.*@@@%@@@%%#*==+%%@@@@%@@+..-*:    +@%%%</tspan>
+<tspan x="16" y="290">-=. .....-:. -@%@@%%%%%#+++#%%%%%%@%@* .-=: ...#%%%%</tspan>
+<tspan x="16" y="310">@@#=.....==-::%@@%@%%%%@@@@@%%%%@@%@@-:-==... -%#%%%</tspan>
+<tspan x="16" y="330">@@@+......:===-#@@%%%%%%%##%%%%%%@@@*===:. ..-+@@%%%</tspan>
+<tspan x="16" y="350">@@@+:..... .::..*%@@@@%%%##@%@@@@@#- .:. ....+@@@%%%</tspan>
+<tspan x="16" y="370">%@%#: ......  .. :=#%@@@@@@%@@@%+-. .  ..    .+@@@@@</tspan>
+<tspan x="16" y="390">%@%%+*...::......  .:=****=***-.  .  .. .:..-#@@@@@@</tspan>
+<tspan x="16" y="410">@@@@@*..:-:......... .========. .  :. .*%%%%@@@@@@@@</tspan>
+<tspan x="16" y="430">@@@@*.:.:--#%%#-   ...========::.:*@%#%@@@@@@@@@@@@@</tspan>
+<tspan x="16" y="450">@@@*.--.::=@@@@%*==#+=======*=:::%@@@@@@@@@@@@@@@@@@</tspan>
+<tspan x="16" y="470">@@=.:+-.::+@@@@@@@=.:*+==----:.  :=+%@@@@@@@@@@@@@@@</tspan>
+<tspan x="16" y="490">%-.:+%..:-%@@@@#*:  .:-...    .:::...-*#%@@@@@@@@@@@</tspan>
+<tspan x="16" y="510">:.:+@=.::+@@@+-.:...    ....:--::...    .-+@@@@@@@@@</tspan>
+<tspan x="16" y="530">::*@+..:=@@+:  .-:........:--:.. .......   =@@@@@@@@</tspan>
+</text>
 </svg>

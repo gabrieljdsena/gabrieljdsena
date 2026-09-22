@@ -1,49 +1,55 @@
-name: ASCII profile card
+name: Refresh ASCII profile card
 
 on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
   push:
     branches:
       - main
-  schedule:
-    - cron: '0 4 * * *'
-  workflow_dispatch:
+    paths:
+      - 'scripts/**'
 
 permissions:
   contents: write
+
+concurrency:
+  group: ascii-card
+  cancel-in-progress: true
 
 jobs:
   card:
     runs-on: ubuntu-latest
     steps:
-      - uses: hu553in/ascii-profile-card@v1
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          config: |
-            login: gabrieljdsena
-            uptimeStart: 2026-01-01
+          python-version: "3.12"
 
-            art:
-              seed: daily
-              columns: 42
-              rows: 20
-              scale: 2.4
-              warp: 2.4
-              bands: 3.4
-              contrast: 2.6
+      - name: Generate card
+        env:
+          GH_HANDLE: gabrieljdsena
+          GH_ROLE: Developer
+        run: |
+          pip install --quiet pillow
+          python scripts/generate_card.py
 
-            card:
-              align: left
-              lines:
-                - { type: header, text: 'gabrieljdsena' }
-                - { type: kv, key: Role, value: 'Developer' }
-                - { type: kv, key: Uptime, value: '{uptime} on GitHub' }
-                - { type: blank }
-                - { type: section, title: GitHub Stats }
-                - { type: kv, key: Repos, value: '{repos}' }
-                - { type: kv, key: Stars, value: '{stars}' }
-                - { type: kv, key: Followers, value: '{followers}' }
-                - { type: kv, key: Contributions, value: '{contributions} (all time)' }
-                - { type: kv, key: Top Languages, value: '{topLanguages}' }
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/dark_mode.svg output/light_mode.svg
+          if git diff --cached --quiet; then
+            echo "Card unchanged - nothing to commit."
+          else
+            git commit -m "chore: refresh ASCII profile card"
+            git push
+          fi
 
-            output:
-              dark: dark_mode.svg
-              light: light_mode.svg
+      - name: Verify SVG
+        run: |
+          test -s output/dark_mode.svg
+          grep -q "<svg" output/dark_mode.svg && echo "dark OK"
+          test -s output/light_mode.svg
+          grep -q "<svg" output/light_mode.svg && echo "light OK"
