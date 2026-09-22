@@ -19,6 +19,8 @@ HANDLE = os.environ.get("GH_HANDLE", "gabrieljdsena")
 COLS = int(os.environ.get("ASCII_COLS", "52"))
 ROLE = os.environ.get("GH_ROLE", "Developer")
 STATUS = os.environ.get("GH_STATUS", "GitHub for personal projects")
+INTERESTS = os.environ.get("GH_INTERESTS", "open source, homelab")
+CONTACT_EMAIL = os.environ.get("GH_EMAIL", "")
 
 # Dense -> sparse. Bright pixels pick sparse glyphs, dark pixels dense glyphs.
 RAMP = "@%#+*=-:. "
@@ -70,14 +72,26 @@ def get_stats():
     repos = json.loads(fetch(f"https://api.github.com/users/{HANDLE}/repos?per_page=100&sort=updated").decode(UTF8))
     stars = sum(r.get("stargazers_count") or 0 for r in repos)
     lang_counter = {}
+    loc_total = 0
     for r in repos:
         lang = r.get("language")
         if lang:
             lang_counter[lang] = lang_counter.get(lang, 0) + 1
-    top = ", ".join(sorted(lang_counter, key=lang_counter.get, reverse=True)[:4]) or "-"
+        loc_total += loc_for_repo(r["name"])
+    top = ", ".join(sorted(lang_counter, key=lang_counter.get, reverse=True)[:6]) or "-"
     prs = search_count(f"author:{HANDLE} type:pr")
-    issues = search_count(f"author:{HANDLE} type:issue")
-    return user, stars, top, prs, issues
+    return user, stars, top, prs, loc_total
+
+
+def loc_for_repo(repo):
+    url = f"https://api.github.com/repos/{HANDLE}/{repo}/stats/code_frequency"
+    try:
+        weeks = json.loads(fetch(url).decode(UTF8))
+        if isinstance(weeks, list) and weeks:
+            return sum(a + d for _, a, d in weeks)
+    except Exception:
+        pass
+    return 0
 
 
 def avatar_to_ascii():
@@ -183,7 +197,7 @@ def build_svg(theme_name, ascii_lines, right_lines):
 
 
 def main():
-    user, stars, top, prs, issues = get_stats()
+    user, stars, top, prs, loc = get_stats()
     ascii_lines = avatar_to_ascii()
 
     uptime = uptime_string(user["created_at"])
@@ -197,11 +211,14 @@ def main():
         ("kv", "Repos", str(user["public_repos"])),
         ("kv", "Stars", str(stars)),
         ("kv", "PRs", str(prs)),
-        ("kv", "Issues", str(issues)),
-        ("kv", "Followers", str(user["followers"])),
-        ("kv", "Following", str(user["following"])),
+        ("kv", "Lines of Code", f"{loc:,}" if loc else "-"),
         ("kv", "Top Languages", top),
+        ("blank",),
+        ("section", "Interests"),
+        ("kv", "Interests", INTERESTS),
     ]
+    if CONTACT_EMAIL:
+        right_lines.insert(1, ("kv", "Contact", CONTACT_EMAIL))
 
     os.makedirs("output", exist_ok=True)
     for theme in ("dark", "light"):
