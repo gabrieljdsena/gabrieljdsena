@@ -31,6 +31,7 @@ jobs:
         env:
           GH_HANDLE: gabrieljdsena
           GH_ROLE: Developer
+          GH_STATUS: GitHub for personal projects
         run: |
           pip install --quiet pillow
           python scripts/generate_card.py

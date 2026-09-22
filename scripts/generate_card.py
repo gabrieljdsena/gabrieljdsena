@@ -18,6 +18,7 @@ from PIL import Image, ImageOps
 HANDLE = os.environ.get("GH_HANDLE", "gabrieljdsena")
 COLS = int(os.environ.get("ASCII_COLS", "52"))
 ROLE = os.environ.get("GH_ROLE", "Developer")
+STATUS = os.environ.get("GH_STATUS", "GitHub for personal projects")
 
 # Dense -> sparse. Bright pixels pick sparse glyphs, dark pixels dense glyphs.
 RAMP = "@%#+*=-:. "
@@ -55,6 +56,15 @@ def fetch(url):
         return resp.read()
 
 
+def search_count(query):
+    url = "https://api.github.com/search/issues?q=" + query.replace(" ", "+") + "&per_page=1"
+    try:
+        data = json.loads(fetch(url).decode(UTF8))
+        return data.get("total_count", "-")
+    except Exception:
+        return "-"
+
+
 def get_stats():
     user = json.loads(fetch(f"https://api.github.com/users/{HANDLE}").decode(UTF8))
     repos = json.loads(fetch(f"https://api.github.com/users/{HANDLE}/repos?per_page=100&sort=updated").decode(UTF8))
@@ -65,7 +75,9 @@ def get_stats():
         if lang:
             lang_counter[lang] = lang_counter.get(lang, 0) + 1
     top = ", ".join(sorted(lang_counter, key=lang_counter.get, reverse=True)[:4]) or "-"
-    return user, stars, top
+    prs = search_count(f"author:{HANDLE} type:pr")
+    issues = search_count(f"author:{HANDLE} type:issue")
+    return user, stars, top, prs, issues
 
 
 def avatar_to_ascii():
@@ -171,19 +183,23 @@ def build_svg(theme_name, ascii_lines, right_lines):
 
 
 def main():
-    user, stars, top = get_stats()
+    user, stars, top, prs, issues = get_stats()
     ascii_lines = avatar_to_ascii()
 
     uptime = uptime_string(user["created_at"])
     right_lines = [
         ("header", HANDLE),
         ("kv", "Role", ROLE),
+        ("kv", "Status", STATUS),
         ("kv", "Uptime", f"{uptime} on GitHub"),
         ("blank",),
         ("section", "GitHub Stats"),
         ("kv", "Repos", str(user["public_repos"])),
         ("kv", "Stars", str(stars)),
+        ("kv", "PRs", str(prs)),
+        ("kv", "Issues", str(issues)),
         ("kv", "Followers", str(user["followers"])),
+        ("kv", "Following", str(user["following"])),
         ("kv", "Top Languages", top),
     ]
 
