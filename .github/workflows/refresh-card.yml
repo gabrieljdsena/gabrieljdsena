@@ -1,47 +1,49 @@
-name: Refresh gh-ascii card
+name: ASCII profile card
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: "17 6 * * *"
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: refresh-gh-ascii-card
-  cancel-in-progress: true
-
 jobs:
-  refresh:
+  card:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: hu553in/ascii-profile-card@v1
+        with:
+          config: |
+            login: gabrieljdsena
+            uptimeStart: 2026-01-01
 
-      - name: Download both themes
-        env:
-          HANDLE: gabrieljdsena
-          GH_ASCII_URL: https://gh.crafter.run
-          IMAGE_URL: "https://freepngimg.com/download/svg/face/45722.svg"
-        run: |
-          curl -fsSL --retry 3 --retry-delay 5 \
-            "$GH_ASCII_URL/$HANDLE?theme=dark&image=$IMAGE_URL" \
-            -o dark_mode.svg
-          curl -fsSL --retry 3 --retry-delay 5 \
-            "$GH_ASCII_URL/$HANDLE?theme=light&image=$IMAGE_URL" \
-            -o light_mode.svg
+            art:
+              seed: daily
+              columns: 42
+              rows: 20
+              scale: 2.4
+              warp: 2.4
+              bands: 3.4
+              contrast: 2.6
 
-      - name: Commit only if the card changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p output
-          mv dark_mode.svg output/
-          mv light_mode.svg output/
-          git add output/
-          if git diff --cached --quiet; then
-            echo "Card unchanged — nothing to commit."
-          else
-            git commit -m "chore: refresh gh-ascii card"
-            git push
-          fi
+            card:
+              align: left
+              lines:
+                - { type: header, text: 'gabrieljdsena' }
+                - { type: kv, key: Role, value: 'Developer' }
+                - { type: kv, key: Uptime, value: '{uptime} on GitHub' }
+                - { type: blank }
+                - { type: section, title: GitHub Stats }
+                - { type: kv, key: Repos, value: '{repos}' }
+                - { type: kv, key: Stars, value: '{stars}' }
+                - { type: kv, key: Followers, value: '{followers}' }
+                - { type: kv, key: Contributions, value: '{contributions} (all time)' }
+                - { type: kv, key: Top Languages, value: '{topLanguages}' }
+
+            output:
+              dark: dark_mode.svg
+              light: light_mode.svg
