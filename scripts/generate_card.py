@@ -19,7 +19,7 @@ HANDLE = os.environ.get("GH_HANDLE", "gabrieljdsena")
 COLS = int(os.environ.get("ASCII_COLS", "52"))
 ROLE = os.environ.get("GH_ROLE", "Developer")
 STATUS = os.environ.get("GH_STATUS", "GitHub for personal projects")
-INTERESTS = os.environ.get("GH_INTERESTS", "open source, homelab")
+INTERESTS = os.environ.get("GH_INTERESTS", "open source, homelab, AI")
 CONTACT_EMAIL = os.environ.get("GH_EMAIL", "")
 
 # Dense -> sparse. Bright pixels pick sparse glyphs, dark pixels dense glyphs.

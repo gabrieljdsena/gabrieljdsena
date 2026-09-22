@@ -32,7 +32,7 @@ jobs:
           GH_HANDLE: gabrieljdsena
           GH_ROLE: Developer
           GH_STATUS: GitHub for personal projects
-          GH_INTERESTS: open source, homelab
+          GH_INTERESTS: open source, homelab, AI
           GH_EMAIL: gabrielsena587@gmail.com
         run: |
           pip install --quiet pillow
