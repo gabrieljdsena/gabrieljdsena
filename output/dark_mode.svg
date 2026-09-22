@@ -28,7 +28,7 @@ text, tspan {white-space: pre;}
 <tspan x="16" y="210">............ +@@@%#*=::-#%%+-::-*++#@%. ....  .=*=-=</tspan>
 <tspan x="554.8000000000001" y="210"><tspan class="dots">. </tspan><tspan class="key">PRs</tspan><tspan class="dots">.............</tspan> <tspan class="value">0</tspan></tspan>
 <tspan x="16" y="230">..........  .#@#*+**.###%@@%#%++.:%**%.   ..-=#@@@@@</tspan>
-<tspan x="554.8000000000001" y="230"><tspan class="dots">. </tspan><tspan class="key">Lines of Code</tspan><tspan class="dots">...</tspan> <tspan class="value">-</tspan></tspan>
+<tspan x="554.8000000000001" y="230"><tspan class="dots">. </tspan><tspan class="key">Lines of Code</tspan><tspan class="dots">...</tspan> <tspan class="value">51,646</tspan></tspan>
 <tspan x="16" y="250">..........-:.+@+#@+*=#@@@@@@@@#**+@%%#..-=..-=*#@%%%</tspan>
 <tspan x="554.8000000000001" y="250"><tspan class="dots">. </tspan><tspan class="key">Top Languages</tspan><tspan class="dots">...</tspan> <tspan class="value">Python, HTML, C#</tspan></tspan>
 <tspan x="16" y="270">  ...... -=:.*@@@%@@@%%#*==+%%@@@@%@@+..-*:    +@%%%</tspan>
