@@ -117,26 +117,13 @@ def get_stats():
         repos = []
     stars = sum(r.get("stargazers_count") or 0 for r in repos)
     lang_counter = {}
-    loc_total = 0
     for r in repos:
         lang = r.get("language")
         if lang:
             lang_counter[lang] = lang_counter.get(lang, 0) + 1
-        loc_total += loc_for_repo(r["name"])
     top = ", ".join(sorted(lang_counter, key=lang_counter.get, reverse=True)[:6]) or "-"
     prs = search_count(f"author:{HANDLE} type:pr")
-    return user, stars, top, prs, loc_total
-
-
-def loc_for_repo(repo):
-    url = f"https://api.github.com/repos/{HANDLE}/{repo}/stats/code_frequency"
-    try:
-        weeks = json.loads(fetch(url).decode(UTF8))
-        if isinstance(weeks, list) and weeks:
-            return sum(a + d for _, a, d in weeks)
-    except Exception:
-        pass
-    return 0
+    return user, stars, top, prs
 
 
 def avatar_to_ascii():
@@ -242,7 +229,7 @@ def build_svg(theme_name, ascii_lines, right_lines):
 
 
 def main():
-    user, stars, top, prs, loc = get_stats()
+    user, stars, top, prs = get_stats()
     ascii_lines = avatar_to_ascii()
 
     uptime = uptime_string(user["created_at"])
@@ -256,7 +243,6 @@ def main():
         ("kv", "Repos", str(user["public_repos"])),
         ("kv", "Stars", str(stars)),
         ("kv", "PRs", str(prs)),
-        ("kv", "Lines of Code", f"{loc:,}" if loc else "-"),
         ("kv", "Top Languages", top),
         ("blank",),
         ("section", "Interests"),
