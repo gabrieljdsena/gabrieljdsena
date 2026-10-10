@@ -30,6 +30,7 @@ jobs:
       - name: Generate card
         env:
           GH_HANDLE: gabrieljdsena
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_ROLE: Developer
           GH_STATUS: GitHub for personal projects
           GH_INTERESTS: open source, homelab, AI

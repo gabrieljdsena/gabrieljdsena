@@ -16,6 +16,7 @@ from io import BytesIO
 from PIL import Image, ImageOps
 
 HANDLE = os.environ.get("GH_HANDLE", "gabrieljdsena")
+TOKEN = os.environ.get("GH_TOKEN", "") or os.environ.get("GITHUB_TOKEN", "")
 COLS = int(os.environ.get("ASCII_COLS", "52"))
 ROLE = os.environ.get("GH_ROLE", "Developer")
 STATUS = os.environ.get("GH_STATUS", "GitHub for personal projects")
@@ -46,16 +47,47 @@ THEMES = {
 UTF8 = "utf-8"
 
 
-def fetch(url):
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "ascii-card-bot",
-            "Accept": "application/vnd.github+json",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read()
+def _headers():
+    headers = {
+        "User-Agent": "ascii-card-bot",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if TOKEN:
+        headers["Authorization"] = f"Bearer {TOKEN}"
+    return headers
+
+
+def fetch(url, retries=3):
+    import time
+    import urllib.error
+
+    last_exc = None
+    for attempt in range(retries):
+        req = urllib.request.Request(url, headers=_headers())
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as e:
+            last_exc = e
+            # GitHub returns remaining quota in headers; surface it when rate limited.
+            remaining = e.headers.get("x-ratelimit-remaining") if e.headers else None
+            reset = e.headers.get("x-ratelimit-reset") if e.headers else None
+            if e.code in (403, 429) and attempt < retries - 1:
+                # 202 is handled by callers; 403/429 -> back off and retry.
+                wait = 5 * (attempt + 1)
+                print(f"warning: {url} -> HTTP {e.code} (remaining={remaining} reset={reset}), retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+            if e.code in (403, 429):
+                hint = "authenticated" if TOKEN else "UNAUTHENTICATED (no GH_TOKEN/GITHUB_TOKEN)"
+                raise RuntimeError(
+                    f"GitHub API rate limit exceeded for {url}: HTTP {e.code} "
+                    f"(remaining={remaining} reset={reset}, {hint}). "
+                    "Fix: pass GH_TOKEN/GITHUB_TOKEN env (workflow already does via secrets.GITHUB_TOKEN)."
+                ) from e
+            raise
+    raise last_exc
 
 
 def search_count(query):
@@ -68,8 +100,21 @@ def search_count(query):
 
 
 def get_stats():
-    user = json.loads(fetch(f"https://api.github.com/users/{HANDLE}").decode(UTF8))
-    repos = json.loads(fetch(f"https://api.github.com/users/{HANDLE}/repos?per_page=100&sort=updated").decode(UTF8))
+    try:
+        user = json.loads(fetch(f"https://api.github.com/users/{HANDLE}").decode(UTF8))
+    except Exception as e:
+        print(f"warning: failed to fetch user profile, using fallback: {e}")
+        # Fallback keeps the workflow green (card still renders) instead of exit 1.
+        now = datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z")
+        user = {"created_at": now, "public_repos": 0}
+    try:
+        repos = json.loads(fetch(f"https://api.github.com/users/{HANDLE}/repos?per_page=100&sort=updated").decode(UTF8))
+        if not isinstance(repos, list):
+            print(f"warning: unexpected repos payload: {repos!r:.200}")
+            repos = []
+    except Exception as e:
+        print(f"warning: failed to fetch repos, using fallback: {e}")
+        repos = []
     stars = sum(r.get("stargazers_count") or 0 for r in repos)
     lang_counter = {}
     loc_total = 0
